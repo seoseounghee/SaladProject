@@ -7,8 +7,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -32,7 +30,7 @@ public class FileUtils {
         System.out.println("ReviewSeq: " + ReviewSeq);
         String re_articleNO = ReviewSeq;	//ServiceImpl에서 전달해준 map에서 신규생성되는 게시글 번호를 받아옴
         
-        File file = new File(filePath);	//파일 저장경로에 해당폴더가 없을 경우 폴더 생성
+        File file = new File(filePath);		//파일 저장경로에 해당폴더가 없을 경우 폴더 생성
         if(file.exists() == false){
         	file.mkdirs();
         }
@@ -44,9 +42,9 @@ public class FileUtils {
         		re_originalFileName = multipartFile.getOriginalFilename();	//파일 원본이름 가져옴
         		re_originalFileExtension = re_originalFileName.substring(re_originalFileName.lastIndexOf("."));	//해당 파일의 확장자 알아냄
         		re_storedFileName = CommonUtils.getRandomString() + re_originalFileExtension;	//getRandomString()메소드를 이용해 랜덤으로 32자리 파일이름 생성
-        																															//원본파일의 확장자를 붙여줌
+        																						//원본파일의 확장자를 붙여줌
         		file = new File(filePath + re_storedFileName);	//서버에 실제파일 저장
-        		multipartFile.transferTo(file);							//지정된 경로에 파일 생성
+        		multipartFile.transferTo(file);	//지정된 경로에 파일 생성
         		
         		//위에서 만든 정보를 list에 추가
         		listMap = new HashMap<String,Object>();

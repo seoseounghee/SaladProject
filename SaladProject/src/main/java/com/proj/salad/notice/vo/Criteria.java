@@ -1,5 +1,6 @@
 package com.proj.salad.notice.vo;
 
+/* 하유리: Criteria 생성 */
 public class Criteria {
 	private int curPage;				//현재페이지
 	private int postsPerPage;		//페이지당 게시글 수

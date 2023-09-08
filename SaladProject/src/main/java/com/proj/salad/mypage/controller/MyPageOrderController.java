@@ -1,6 +1,5 @@
 package com.proj.salad.mypage.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.proj.salad.mypage.service.MyPageOrderServiceImpl;
 import com.proj.salad.mypage.vo.OrderInfoVO;
 import com.proj.salad.mypage.vo.OrderListVO;

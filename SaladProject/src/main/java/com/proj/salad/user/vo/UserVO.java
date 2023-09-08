@@ -20,15 +20,15 @@ import lombok.Data;
 @Data
 @Component("userVO")
 public class UserVO {
-	private String userId;
-	private String userPwd;
-	private String userName;
-	private String userBirth;
-	private String userGender;
-	private String userEmail;
-	private String userPhone;
-	private String userAddress1;
-	private String userAddress2;
+	private String userId;             	//유저아이디(기본키)
+	private String userPwd;				//유저비밀번호
+	private String userName;			//유저이름
+	private String userBirth;			//유저생년월일
+	private String userGender;		//유저성별
+	private String userEmail;			//유저이메일
+	private String userPhone;			//유저연락처
+	private String userAddress1;	//유저기본주소
+	private String userAddress2;	//유저상세주소
 	private String smssts_yn;        //SMS 수신동의 여부(23.07.20 추가)
 	private String emailsts_yn;    //Email 수신동의 여부(23.07.20 추가)
 	

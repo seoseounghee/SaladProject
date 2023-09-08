@@ -12,7 +12,6 @@ import com.proj.salad.order.vo.AccountVO;
 import com.proj.salad.order.vo.OrderMenuVO;
 import com.proj.salad.order.vo.OrderVO;
 
-
 @Repository
 public class OrderDAOImpl implements OrderDAO{
 	@Autowired

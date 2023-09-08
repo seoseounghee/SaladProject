@@ -6,15 +6,15 @@ import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
-/*서승희 mypageVO*/
+/* 서승희: mypageVO */
 @Data
 @Component("mypageVO")
 public class MyPageVO {
 	private String userId;  //유저아이디 외래키
-	private String beginDate;
-	private String endDate;
+	private String beginDate;  //시작일자
+	private String endDate;  //마지막일자
 	
-    /* OrderVO */
+    /* 김동혁: OrderVO */
     private int orderNum; // 주문번호
     private String fakeOrderNum; // 주문번호2
     private String orderStatus; // 주문상태
@@ -30,7 +30,7 @@ public class MyPageVO {
     private int totalPrice; // 총 가격
     private Date prodDeliveryDate; // 배송일자
 
-    /* OrderMenuVO */
+    /* 김동혁: OrderMenuVO */
     private int orderMenuNum; // 주문메뉴번호
     private String menuName; // 메뉴 이름
     private int menuCount; // 메뉴 수량

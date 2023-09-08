@@ -1,8 +1,5 @@
 package com.proj.salad.prod.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -16,22 +13,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.proj.salad.cart.service.CartServiceImpl;
 import com.proj.salad.cart.vo.CartVO;
 import com.proj.salad.prod.service.ProdServiceImpl;
 import com.proj.salad.user.vo.UserVO;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 public class HomeController {
 	
     @Autowired
     CartServiceImpl cartService;
+    
     @Autowired
     ProdServiceImpl prodService;
+    
     @Autowired
     CartVO cartVO;
 
@@ -44,12 +39,12 @@ public class HomeController {
 
 		/* 김동혁 추가 */
 		/* 메인화면 '추천식단' 부분에 상품 리스트 출력 */
-		/*		List prodList = new ArrayList();
-				prodList = prodService.selectProdList();*/
+		/*	List prodList = new ArrayList();
+			prodList = prodService.selectProdList();*/
 
 
 		ModelAndView mav = new ModelAndView();
-		/*		mav.addObject("prodList", prodList);*/
+		/*	mav.addObject("prodList", prodList);*/
 		mav.setViewName(viewName);
 		return mav;
 	}
@@ -72,7 +67,6 @@ public class HomeController {
 	    System.out.println("/mainAddCart 메소드 실행");
 	    String prodNum = request.getParameter("prodNum");
 
-	    // 수정해야함!!!!
 	    cartVO.setProdNum(Integer.parseInt(prodNum));
 	    cartVO.setCartCount(1);
 
@@ -80,7 +74,7 @@ public class HomeController {
 	    String userId = null;
 	    UserVO userVO = null;
 
-	    // 세션 형변환을 boolean이 아닌 Boolean으로 형변환
+	    // 세션 형변환을 Boolean으로 형변환
 	    if((Boolean) session.getAttribute("isLogOn")) {
 	        userVO = (UserVO) session.getAttribute("user");
 	        userId = userVO.getUserId();

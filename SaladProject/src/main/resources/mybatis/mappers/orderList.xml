@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- orderList 매퍼 / 김동혁 추가(23.07.26) -->
+<!-- 김동혁: orderList 매퍼 추가(23.07.26) -->
  <mapper namespace="mapper.orderList">
 
     <!-- 반환값 Map(shop_order, order_menu을 Join 한 데이터) 지정 -->
@@ -59,31 +59,7 @@
 
 
     
-    <!-- 주문 목록 리스트 검색(임시 비활성) -->
-    <!-- 기준 : UserId만 검색, orderNum을 desc 순으로 정렬-->
-    <!--<select id="selectOrderList" parameterType="String" resultMap="orderListResult">
-        SELECT so.ORDERNUM,
-               so.USERID,
-               so.ORDERSTATUS,
-               so.ORDERCREATETIMESTAMP,
-               so.ORDERUPDATETIMESTAMP,
-               so.ORDERERNAME,
-               so.ORDERERPHONE,
-               so.ORDEREREMAIL,
-               so.DESTNAME,
-               so.DESTPHONE,
-               so.DESTLOC1,
-               so.DESTLOC2,
-               so.TOTALPRICE,
-               so.PRODDELIVERYDATE,
-               om.ORDERMENUNUM,
-               om.MENUNAME,
-               om.MENUCOUNT
-        FROM SCOTT.SHOP_ORDER so
-                 JOIN SCOTT.ORDER_MENU om ON so.ORDERNUM = om.ORDERNUM
-        WHERE so.ORDERERNAME = #{userName}
-        order by ORDERNUM desc
-    </select>-->
+    <!-- 주문 목록 리스트 검색 -->
     <select id="selectOrderList" parameterType="String" resultMap="orderListResult">
         SELECT * FROM SHOP_ORDER
         WHERE ordererName = #{userName}

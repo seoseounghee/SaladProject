@@ -2,6 +2,7 @@ package com.proj.salad.notice.vo;
 
 import java.util.Date;
 
+/* 하유리: Notice_imageVO 생성 */
 public class Notice_imageVO {
 	private int nt_imgNO;					//이미지파일 번호(기본키)
 	private int articleNO;					//공지게시판 게시물 번호(참조키)

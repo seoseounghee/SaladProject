@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+/* 하유리: NoticeVO 생성 */
 @Component("noticeVO")
 public class NoticeVO {
 

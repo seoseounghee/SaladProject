@@ -49,9 +49,7 @@
 					<option value="tc"<c:out value="${scri.searchType eq 'tc' ? 'selected' : ''}"/>>제목+내용</option>
 				</select>
 				<input type="text" class="search-bar" id="keywordInput" name="keyword" placeholder="검색" autocomplete="off" value="${scri.keyword}"/>	
-				<button type="submit" class="search-btn" value="" onClick="inputChk()">
-					<img src="${contextPath}/resources/image/common/footer/magnifier.png"/>
-				</button>		
+				<button type="submit" class="search-btn" value=""><img src="${contextPath}/resources/image/common/footer/magnifier.png"/></button>	<!-- button태그로 변경, value값 제거, 이미지 추가(23.08.11.) -->			
 			</div>
 		</div>
 		<table class="table table-hover">
@@ -59,37 +57,23 @@
 	    		<tr style="border-top: 1px solid #000; border-bottom: 1px solid #000;"> 
 					<th scope="col" width="15%">글 번호</th>
 			      	<th scope="col" width="41%">제목</th>
-			      	<th scope="col" width="14%">작성자</th>
+			      	<th scope="col" width="16%">작성자</th>
 			      	<th scope="col" width="15%">작성일</th>
 			      	<th scope="col" width="15%">조회수</th>
 			    </tr>
 	  		</thead>
-	  		
 	  		<tbody>
 		  		<c:choose>
 					<c:when test="${!empty reviewList}">
 						<c:forEach items="${reviewList }" var="review" varStatus="reviewStatus">
 				    		<tr>
 				    			<!-- 글 번호 -->
-				    			<th scope="row">	
-				    				<c:choose>
-				    					<c:when test="${reviewStatus.count<=3}">	<!-- 최다조회수 게시글 3개 상위노출 및 이미지 출력  -->
-				    						<span><img width="20px" src="${contextPath}/resources/image/review/bestCnt.png"/></span>
-				    					</c:when>
-				    					<c:otherwise>	<!-- 일반글 -->
-				    						<span>${review.re_articleNO }</span>
-				    					</c:otherwise>
-				    				</c:choose>
+				    			<th scope="row">
+									<span>${review.re_articleNO }</span>
 				    			</th>
-				    			
 				    			<!-- 글 제목 -->
 				    			<td class="re_title" align="left">
-					    			<c:choose>
-					    				<c:when test="${reviewStatus.count<=3}"><!-- 베스트글 표시 -->
-					    					<span style="font-size:15px; color:#128853"> [베스트]</span>
-					    					<a href="${contextPath}/review/content?re_articleNO=${review.re_articleNO }"><c:out value="${review.re_title }"/></a>
-					    				</c:when>
-					    				
+					    			<c:choose>					    				
 					    				<c:when test="${review.level>1 }"> <!-- 답변 표시 -->
 					    					<c:forEach begin="1" end="${review.level }" step="2">
 					    						<span style="padding-left: 25px"></span>
@@ -135,22 +119,22 @@
 		<div class="pagination">
 			<!-- 이전 버튼 -->
 			<c:if test="${pageMaker.prev}">
-            	<a href="${pageMaker.makeQuery(pageMaker.startPage-1)}">&laquo;</a></li>
+            	<a href="${pageMaker.makeSearch(pageMaker.startPage-1)}">&laquo;</a></li>
             </c:if>
               	
 			<!-- 각 번호 페이지 버튼 -->				
 			<c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage}" var="curPage">
 				<c:if test="${select != curPage }">
-					<a href="${pageMaker.makeQuery(curPage)}">${curPage}</a>
+					<a href="${pageMaker.makeSearch(curPage)}">${curPage}</a>
 				</c:if>
 				<c:if test="${select == curPage }">
-					<a class="active" href="${pageMaker.makeQuery(curPage)}">${curPage}</a>
+					<a class="active" href="${pageMaker.makeSearch(curPage)}">${curPage}</a>
 				</c:if>
 			</c:forEach>
 			
 			<!-- 다음페이지 버튼 -->
             <c:if test="${pageMaker.next && pageMaker.endPage>0}">
-                <a href="${pageMaker.makeQuery(pageMaker.endPage+1)}">&raquo;</a>
+                <a href="${pageMaker.makeSearch(pageMaker.endPage+1)}">&raquo;</a>
             </c:if>  
 			<form id="moveForm" method="get">
 				<input type="hidden" name="curPage" value="${pageMaker.criteria.curPage }">

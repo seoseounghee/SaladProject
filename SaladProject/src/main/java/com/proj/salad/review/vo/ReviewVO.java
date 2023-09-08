@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 @Component("reviewVO")
 public class ReviewVO {
-
 	private int level;
 	private int re_articleNO;
 	private int re_parentNO;
@@ -19,7 +18,7 @@ public class ReviewVO {
 	private int re_viewCnt;
 	private List<Review_imageVO> re_imageFileList;
 
-	// 김동혁 VO 추가(23.08.01) - getter, setter, toString도 수정
+	// 김동혁: VO 추가(23.08.01) 
 	private String re_fakeOrderNum;
 	private int re_orderNum;
 	
@@ -121,7 +120,6 @@ public class ReviewVO {
 	}
 
 	//toString
-
 	@Override
 	public String toString() {
 		return "ReviewVO{" +

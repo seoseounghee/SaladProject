@@ -16,10 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
-/* 김동혁 - Controller 추가 */
+/* 김동혁: ProdController 추가 */
 @Controller
 public class ProdController {
-
     @Autowired
     ProdServiceImpl prodService;
 
@@ -35,7 +34,7 @@ public class ProdController {
         return mav;
     }
 
-    /* 김동혁 추가 : 메인 페이지 추가 (23.07.14) */
+    /* 김동혁: 메인 페이지 추가 (23.07.14) */
     @RequestMapping(value = "/menu", method = RequestMethod.GET)
     public ModelAndView menuPage(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String viewName = getViewName(request);
@@ -55,11 +54,10 @@ public class ProdController {
         return mav;
     }
 
-    /* 김동혁 detail 메소드 추가 (23.07.18) */
+    /* 김동혁: detail 메소드 추가 (23.07.18) */
     @RequestMapping(value = "/detail", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
-    public String detailPage(@RequestParam int prodNum,
-            HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public String detailPage(@RequestParam int prodNum, HttpServletRequest request, HttpServletResponse response) throws Exception {
         String viewName = getViewName(request);
 
         System.out.println("shopdetail");

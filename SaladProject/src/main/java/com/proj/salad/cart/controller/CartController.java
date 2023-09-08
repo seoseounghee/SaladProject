@@ -34,7 +34,6 @@ public class CartController {
         System.out.println(request.getParameter("prodNum"));
         System.out.println(request.getParameter("cartCount"));
 
-        // 수정해야함!!!!
         cartVO.setProdNum(Integer.parseInt(request.getParameter("prodNum")));
         cartVO.setCartCount(Integer.parseInt(request.getParameter("cartCount")));
 
@@ -43,7 +42,7 @@ public class CartController {
         UserVO userVO = null;
         HttpSession session = request.getSession();
 
-        // 세션 형변환을 boolean이 아닌 Boolean으로 형변환
+        // 세션 형변환을 Boolean으로 형변환
         if((Boolean) session.getAttribute("isLogOn")) {
             userVO = (UserVO) session.getAttribute("user");
             userId = userVO.getUserId();
@@ -100,8 +99,6 @@ public class CartController {
 
         return mav;
     }
-
-
 
     private String getViewName(HttpServletRequest request) throws Exception {
         String contextPath = request.getContextPath();

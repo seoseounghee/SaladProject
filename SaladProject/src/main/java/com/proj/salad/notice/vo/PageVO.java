@@ -3,8 +3,8 @@ package com.proj.salad.notice.vo;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
+/* 하유리: PageVO 생성 */
 public class PageVO {	
-	
 	private int totalPost;					//총 게시물 수 	
 	private int startPage;				//시작페이지 번호		
 	private int endPage;				//마지막페이지 번호

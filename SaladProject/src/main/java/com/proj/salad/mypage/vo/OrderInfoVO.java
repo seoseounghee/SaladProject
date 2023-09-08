@@ -1,6 +1,7 @@
 package com.proj.salad.mypage.vo;
 
 import lombok.Data;
+
 import org.springframework.stereotype.Component;
 
 import java.sql.Date;
@@ -8,7 +9,7 @@ import java.sql.Date;
 @Data
 @Component
 public class OrderInfoVO {
-    /* OrderVO */
+    /* 김동혁: OrderVO */
     private int orderNum; // 주문번호
     private String fakeOrderNum; // 주문번호2
     private String userId; // 유저아이디

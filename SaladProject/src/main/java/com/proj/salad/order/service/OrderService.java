@@ -18,7 +18,7 @@ public interface OrderService {
 
 	public void deleteCartList(String userId) throws DataAccessException;
 
-	public void newAccount(AccountVO accountVO)throws DataAccessException;
+	public void newAccount(AccountVO accountVO) throws DataAccessException;
 
 	public List<OrderVO> orderTime() throws DataAccessException;
 

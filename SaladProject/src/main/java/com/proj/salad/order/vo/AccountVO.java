@@ -1,12 +1,12 @@
 package com.proj.salad.order.vo;
 
-
 import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
 @Data
 @Component("AccountVO")
+/* 조상현: AccountVO 생성 */
 public class AccountVO {
 	private int OrderAccountNum; // 기본키
 	private int OrderNum; // 외래키

@@ -23,9 +23,8 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="com.proj.salad" />
+	
 		<!-- 타일즈 실습 설정 -->
-
-
 	<beans:bean id="tilesConfigurer"
 		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
 		<beans:property name="definitions">
@@ -43,7 +42,6 @@
 			value="org.springframework.web.servlet.view.tiles2.TilesView" />
 		<beans:property name="order" value="1"></beans:property>
 	</beans:bean>
-
 	
 		<!-- 멀티파트 리졸버 -->
 	<beans:bean id="multipartResolver"
@@ -52,8 +50,5 @@
 		<beans:property name="maxInMemorySize" value="52428800" />
 		<beans:property name="defaultEncoding" value="utf-8" />
 	</beans:bean>
-	
-	
-	
 	
 </beans:beans>

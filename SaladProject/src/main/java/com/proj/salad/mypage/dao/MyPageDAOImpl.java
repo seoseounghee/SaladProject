@@ -9,7 +9,6 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
 import com.proj.salad.mypage.vo.MyPageVO;
-import com.proj.salad.order.vo.OrderVO;
 import com.proj.salad.user.vo.UserVO;
 
 @Repository("myPageDAO")

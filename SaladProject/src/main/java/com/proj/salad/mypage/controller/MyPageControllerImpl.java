@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.proj.salad.order.vo.OrderVO;
 import com.proj.salad.mypage.service.MyPageService;
 import com.proj.salad.mypage.vo.MyPageVO;
 import com.proj.salad.user.vo.UserVO;
@@ -32,6 +31,7 @@ public class MyPageControllerImpl implements MyPageController {
 
 	@Autowired  //의존성주입
 	MyPageService myPageService;
+	
 	@Autowired //의존성주입
 	UserVO userVO;
 

@@ -27,9 +27,9 @@ import com.proj.salad.user.vo.UserVO;
 /* 서승희 userController */
 @Controller("userController") // @Controller 애너테이션을 이용해 userController 클래스를 빈으로 자동변환 빈 id는 userController
 public class UserControllerImpl implements UserController {
-
 	@Autowired // 의존성주입
 	private UserService userService;
+	
 	@Autowired // 의존성주입
 	private UserVO userVO;
 

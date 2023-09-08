@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.proj.salad.mypage.dao.MyPageDAO;
 import com.proj.salad.mypage.vo.MyPageVO;
-import com.proj.salad.order.vo.OrderVO;
 import com.proj.salad.user.vo.UserVO;
 
 @Service("myPageService")
