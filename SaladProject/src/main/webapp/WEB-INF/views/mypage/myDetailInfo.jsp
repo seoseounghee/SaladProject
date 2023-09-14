@@ -40,7 +40,7 @@
 									<p class="join_label">아이디<span class="essential">*</span>
 								</td>	
 								<td align="left">
-									<input class="join_input" type="text" name="userId" id="userId" minlength="2" maxlength="10" required  value="${user.userId }" disabled/>					<!-- 서승희: <style> 삭제(23.08.01.) -->					
+									<input class="join_input" type="text" name="userId" id="userId" minlength="2" maxlength="10" required  value="${user.userId }" disabled/>				
 								</td>
 							</tr>
 							<tr class="dot_line">
@@ -61,7 +61,7 @@
 									<p class="join_label">비밀번호 확인<span class="essential">*</span>
 								</td>	
 								<!-- 서승희: 비밀번호 확인(23.07.27.) -->
-								<!-- onkeyup="JS function" 입력이 되었을 때 -->
+								<!-- onkeyup="passConfirm()" 입력이 되었을 때 -->
 								<td>
 									<input type="password" class="join_input" id="userPwdConfirm" name="userPwdConfirm" 
 										   placeholder="비밀번호 확인" onkeyup="passConfirm()">
@@ -84,7 +84,7 @@
 							</tr>
 							<tr class="dot_line">
 								<td class="fixed_join">
-									<p class="join_label">성별<span class="essential">*</span>																	<!-- 하유리: <span> 태그 추가, align속성 삭제(23.07.25.) -->
+									<p class="join_label">성별<span class="essential">*</span>				
 								</td>
 								<td class="userGender" align="left">
 									<c:choose>
@@ -311,7 +311,7 @@
 		function passConfirm() {
 		/* 비밀번호, 비밀번호 확인 입력창에 입력된 값을 비교해서 같다면 비밀번호 일치, 그렇지 않으면 불일치 라는 텍스트 출력 */
 		/* document : 현재 문서를 의미함. 작성되고 있는 문서를 뜻함 */
-		/* getElementByID('아이디') : 아이디에 적힌 값을 가진 id의 value를 get을 해서 password 변수 넣기 */
+		/* getElementById('userPwd') : 비밀번호에 적힌 값을 가진 userPwd의 value를 get을 해서 password 변수 넣기 */
 		var password = document.getElementById('userPwd');					//비밀번호 
 		var passwordConfirm = document.getElementById('userPwdConfirm');	//비밀번호 확인 값
 		var confirmMsg = document.getElementById('confirmMsg');				//확인 메세지

@@ -71,7 +71,6 @@
 								<a href="javascript:search_order_history('six_month')"> 
 									<img src="${contextPath}/resources/image/search/btn_search_6_month.jpg">
 								</a> 
-							<!-- &nbsp;까지 조회 -->
 							</td>
 						</tr>
 						<br>
@@ -83,7 +82,6 @@
 					<tr style="background:lightgray" >
 						<td class="list_order_title"   width="120px">주문일자</td>
 						<td class="list_order_title"  width="120px">주문번호</td>
-						<!-- <td  width="120px">주문상품/수량</td> -->
 						<td class="list_order_title"  width="120px">주문자</td>
 						<td class="list_order_title"  width="120px">주문가격</td>
 						<td class="list_order_title"  width="120px">주문상태</td>

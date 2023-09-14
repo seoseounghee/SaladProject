@@ -131,7 +131,7 @@
 	
 					for (var i = 0; i < response.length; i++) {
 						var comment = response[i];
-						var newComment = $('<div class="line">');                                                                  					/* 하유리 변수명 변경(23.08.02.) */
+						var newComment = $('<div class="line">');                                                                 
 						var levelSum = 0;
 	
 						if (comment.ac_parentNO !== 0) {

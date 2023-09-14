@@ -76,9 +76,8 @@ td {
 
 /* 하유리: '회원가입' 텍스트를 제외한 회원가입폼(23.07.25.) */
 .lineAndForm {
-	width: 640px;
+	width: 850px;
 	margin: 0px 70px;	/* 하유리: 좌측 여백너비 수정(23.08.02.) */
-	
 	border: 1px solid #e2e2e2;
 	padding: 80px 100px;
 	border-radius: 15px;
@@ -245,4 +244,9 @@ td {
 /* 김동혁: 이미지 커서 표시(23.08.02.) */
 .btn-cursor-pointer {
 	cursor: pointer;
+}
+
+/* 비밀번호 확인 불일치 일치 메세지 */
+#confirmMsg{
+	font-size: 14px;
 }

@@ -29,7 +29,6 @@
 			font-weight: 700;
 			line-height: 1.2;
     		letter-spacing: -3px;
-    		/* margin-bottom: 20px; */	/* 제목1, 제목2 사이 간격 */
 		}
 		
 		/* 이벤트페이지 제목2 */
@@ -40,8 +39,6 @@
 	
 		.container {
 			width: 100%;
-/*			display: flex;
-			justify-content: center; */
 			text-align: center;
 			font-family: 'Noto Sans KR', sans-serif;
  			font-size: 14px;
@@ -115,7 +112,7 @@
 		}
 		
 		.contentBtn:focus {
-			outline: none;						/* 하유리: 버튼 클릭 시 생기는 테두리 없애기(23..07.31.) */
+			outline: none;			/* 하유리: 버튼 클릭 시 생기는 테두리 없애기(23..07.31.) */
 		}
 	</style>
 </head>

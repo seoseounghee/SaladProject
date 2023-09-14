@@ -70,19 +70,19 @@
 	            </div>
 	            <div class="line">
 	                <div class="line-title"><label for="memo">배송시 요청사항</label></div>
-	                <div class="line-content"><input type="text" name="memo" id="memo" placeholder="요청사항을 입력해주세요" required autocomplete="none">		<!-- 하유리: 자동완성기능 끄기(23.08.02.) -->
+	                <div class="line-content"><input type="text" name="memo" id="memo" placeholder="요청사항을 입력해주세요" required autocomplete="none">	
 	                </div>
 	            </div>
 	        </div>
 			<p class="h3">결제 상품 목록</p>
 	        <div class="item-box">
 	            <c:forEach items="${orderList}" var="cartList" varStatus="listStatus">
-	                <div class="info-block order-list">		<!-- 하유리: 클래스명 추가(23.08.01.) -->
+	                <div class="info-block order-list">	
 	                    <div class="line">
 	                        <div class="line-title">상품정보 </div>
-	                        <div class="line-content">상품명: <b>${cartList.prodName}</b></div>		<!-- 하유리: '상품명: ' 텍스트, <b> 추가(23.08.01.) -->
-	                        <div class="line-content">수량: <b>${cartList.cartCount}</b></div>			<!-- 하유리: '상품명: ' 텍스트, <b> 추가(23.08.01.) -->
-	                        <div class="line-content">상품가격: <b>${cartList.prodPrice}원</b></div>	<!-- 하유리: '상품명: ' 텍스트, <b>, '원' 추가(23.08.01.) -->
+	                        <div class="line-content">상품명: <b>${cartList.prodName}</b></div>		
+	                        <div class="line-content">수량: <b>${cartList.cartCount}</b></div>		
+	                        <div class="line-content">상품가격: <b>${cartList.prodPrice}원</b></div>	
 	                    </div>
 	                    <!-- 다른 속성들도 필요하면 여기에 추가 -->
 	                    <!-- cartList의 가격을 totalPrice에 더함 -->

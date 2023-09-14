@@ -53,12 +53,12 @@
 				<!-- 회원메뉴 -->
 				<div class="memberMenu">
 					<ul class="list1">
-						<!-- 서승희 수정(23.07.16.) 하유리 수정(23.07.30.) -->
 						<c:choose>
 							<c:when test="${isLogOn==true && user != null }">
 								<div class="userMenu">
-									<p>${user.userName } 님</p>	<!-- 하유리: userName과 님 사이에 공백 추가(23.07.30.) -->
-									<p><a href="${contextPath}/user/logout.do"><img width="18px" src="${contextPath}/resources/image/common/header/logout3.png"/></a></p>	<!-- 로그아웃 -->
+									<p>${user.userName } 님</p>	
+									<!-- 로그아웃 -->
+									<p><a href="${contextPath}/user/logout.do"><img width="18px" src="${contextPath}/resources/image/common/header/logout3.png"/></a></p>	
 								</div>
 								<div class="functionMenu">
 									<ul>
